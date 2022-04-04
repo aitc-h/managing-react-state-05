@@ -47,5 +47,9 @@ export default function useCart() {
     );
   }
 
-  return { cart, addToCart, updateQuantity };
+  const emptyCart = () => {
+    setCart([]);
+  };
+
+  return { cart, addToCart, updateQuantity, emptyCart };
 }
