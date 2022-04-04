@@ -10,11 +10,12 @@ import useCart from './hooks/useCart';
 
 export default function App() {
   const { addToCart, cart, updateQuantity } = useCart();
+  const numItemsInCart = cart.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <>
       <div className="content">
-        <Header />
+        <Header numItemsInCart={numItemsInCart} />
         <main>
           <Routes>
             <Route path="/" element={<h1>Welcome to Carved Rock Fitness</h1>} />

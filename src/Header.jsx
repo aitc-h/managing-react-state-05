@@ -5,7 +5,7 @@ const activeStyle = {
   color: 'purple',
 };
 
-export default function Header() {
+export default function Header({ numItemsInCart }) {
   return (
     <header>
       <nav>
@@ -34,7 +34,7 @@ export default function Header() {
               }}
               to="/cart"
             >
-              Cart
+              Cart{numItemsInCart > 0 ? ` (${numItemsInCart})` : null}
             </NavLink>
           </li>
         </ul>
