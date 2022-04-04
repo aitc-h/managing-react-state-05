@@ -51,7 +51,7 @@ export default function Cart({ cart, updateQuantity }) {
       <h2>
         {numItemsInCart === 0
           ? 'Cart is empty'
-          : `${numItemsInCart} Item${numItemsInCart > 1 ? 's' : ''} in Cart`}
+          : `${numItemsInCart} item${numItemsInCart > 1 ? 's' : ''} in cart`}
       </h2>
 
       <ul>{cart.map(renderItem)}</ul>
